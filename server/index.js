@@ -33,8 +33,8 @@ app.use(cors({
     credentials:true
 }));
 
-app.use('/haicore/', haiku);
-app.use('/haicore', users);
+app.use('/', haiku);
+app.use('/', users);
 
 app.use(errorController);
 
