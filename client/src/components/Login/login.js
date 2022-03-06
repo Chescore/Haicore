@@ -19,7 +19,7 @@ const Login = () => {
 
     async function onSubmit(e){
         try{
-            await axios.post('http://localhost:5000/haicore/login', authDetails);
+            await axios.post('https://haicore.herokuapp.com//login', authDetails);
             await getLoggedIn();
             navigate('/create');
         }catch(err){

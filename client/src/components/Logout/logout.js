@@ -10,7 +10,7 @@ const Logout = () => {
     const navigate = useNavigate();
 
     async function logOut(){
-        await axios.get('http://localhost:5000/haicore/logout');
+        await axios.get('https://haicore.herokuapp.com//logout');
         await getLoggedIn();
         navigate('/');
     }

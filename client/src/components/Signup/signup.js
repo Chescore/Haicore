@@ -21,7 +21,7 @@ const Signup = () => {
 
     async function onSubmit(){
         try{
-            await axios.post("http://localhost:5000/haicore/register", authDetails);
+            await axios.post("https://haicore.herokuapp.com//register", authDetails);
             await getLoggedIn(); 
             navigate('/create');
         }catch(err){

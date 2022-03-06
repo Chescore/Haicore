@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'http://localhost:5000/haicore';
+const URL = 'https://haicore.herokuapp.com/';
 
 export const fetchPosts = () => axios.get(URL);
 export const fetchUsersPosts = () => axios.get(`${URL}/userPosts`);

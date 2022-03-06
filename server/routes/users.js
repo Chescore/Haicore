@@ -40,7 +40,9 @@ router.post('/register',async(req,res)=>{
 
         //send token in a cookie
         res.cookie('token',token,{
-            httpOnly:true
+            httpOnly:true,
+            secure: true,
+            sameSite: "none"
         }).send()
     }catch(err){
         console.log(err);
@@ -57,7 +59,9 @@ router.post('/login', async(req,res)=>{
             const token = user.generateAuthToken();
             user.token = token;
             res.cookie('token',token,{
-                httpOnly:true
+                httpOnly:true,
+                secure: true,
+                sameSite: "none"
             }).send()
         }else{
             res.status(401).send('Invalid Email or Password');
@@ -70,7 +74,9 @@ router.post('/login', async(req,res)=>{
 router.get('/logout',(req,res)=>{
     res.cookie('token','',{
         httpOnly:true,
-        expires: new Date(0)
+        expires: new Date(0),
+        secure: true,
+        sameSite: "none"
     }).send();
 })
 

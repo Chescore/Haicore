@@ -7,7 +7,7 @@ const AuthContextProvider = ({children}) => {
     const [loggedIn,setLoggedIn] = useState(undefined);
 
     async function getLoggedIn(){
-        const loggedInResponse = await axios.get("http://localhost:5000/haicore/loggedIn");
+        const loggedInResponse = await axios.get("https://haicore.herokuapp.com//loggedIn");
         setLoggedIn(loggedInResponse.data);
     }
 
