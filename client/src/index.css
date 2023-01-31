@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Cormorant_Medium";
+  src: url("../public/fonts/Cormorant/Cormorant-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "Cormorant";
+  src: url("../public/fonts/Cormorant/Cormorant-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../public/fonts/Nunito/static/Nunito-Medium.ttf");
+}
+
+@font-face {
+  font-family: "BioRhyme";
+  src: url("../public/fonts/BioRhyme/BioRhyme-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Hahmlet";
+  src: url("../public/fonts/Hahmlet/static/Hahmlet-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Spectral";
+  src: url("../public/fonts/Spectral/Spectral-Light.ttf");
+}
