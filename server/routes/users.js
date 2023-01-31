@@ -8,9 +8,6 @@ router.post('/register',async(req,res)=>{
     try{
         const {username, email, password, passwordVerify } = req.body;
 
-        // if(!(username&&email&&password&&passwordVerify)){
-        //     res.status(400).send('All inputs are required');
-        // }
         const oldUsername = await User.findOne({username});
         if(oldUsername){
             return res.status(400).send('Username already exists')
@@ -40,9 +37,9 @@ router.post('/register',async(req,res)=>{
 
         //send token in a cookie
         res.cookie('token',token,{
-            httpOnly:true
-            // secure: true,
-            // sameSite: "none"
+            httpOnly:true,
+            secure: true,
+            sameSite: "none"
         }).send()
     }catch(err){
         console.log(err);
@@ -59,9 +56,9 @@ router.post('/login', async(req,res)=>{
             const token = user.generateAuthToken();
             user.token = token;
             res.cookie('token',token,{
-                httpOnly:true
-                // secure: true,
-                // sameSite: "none"
+                httpOnly:true,
+                secure: true,
+                sameSite: "none"
             }).send()
         }else{
             res.status(401).send('Invalid Email or Password');
@@ -74,9 +71,9 @@ router.post('/login', async(req,res)=>{
 router.get('/logout',(req,res)=>{
     res.cookie('token','',{
         httpOnly:true,
-        expires: new Date(0)
-        // secure: true,
-        // sameSite: "none"
+        expires: new Date(0),
+        secure: true,
+        sameSite: "none"
     }).send();
 })
 
