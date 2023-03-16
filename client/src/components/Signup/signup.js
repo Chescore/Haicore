@@ -21,7 +21,7 @@ const Signup = () => {
 
     async function onSubmit(){
         try{
-            await axios.post("https://haicore.up.railway.app/register", authDetails);
+            await axios.post("https://haicore.onrender.com/register", authDetails);
             await getLoggedIn(); 
             navigate('/create');
         }catch(err){

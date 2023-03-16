@@ -19,7 +19,7 @@ const Login = () => {
 
     async function onSubmit(e){
         try{
-            await axios.post('https://haicore.up.railway.app/login', authDetails);
+            await axios.post('https://haicore.onrender.com/login', authDetails);
             await getLoggedIn();
             navigate('/create');
         }catch(err){

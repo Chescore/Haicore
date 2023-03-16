@@ -10,7 +10,7 @@ const Logout = () => {
     const navigate = useNavigate();
 
     async function logOut(){
-        await axios.get('https://haicore.up.railway.app/logout');
+        await axios.get('https://haicore.onrender.com/logout');
         await getLoggedIn();
         navigate('/');
     }

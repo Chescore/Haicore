@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'https://haicore.up.railway.app';
+const URL = 'https://haicore.onrender.com';
 
 export const fetchPosts = () => axios.get(URL);
 export const fetchUsersPosts = () => axios.get(`${URL}/userPosts`);
