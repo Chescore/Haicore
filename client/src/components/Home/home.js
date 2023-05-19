@@ -18,17 +18,17 @@ const Home = () => {
     const showPosts = () =>{
         return posts.map((post,i)=>{
             return(
-                <div key={i} className='flex justify-end even:justify-start px-2 py-4'>
-                    <div className='inline-block shadow-2xl p-4 bg-gradient-to-tr from-cyan-200 to-blue-500'>
-                        <div className='text-sky-700 font-spectral tracking-widest border-b-2 border-slate-400 text-sm'>
+                <div key={i} className='flex bg-white justify-center mx-2 my-1 px-2 py-4 shadow'>
+                    <div className='inline-block p-4'>
+                        <div className='text-violet-900 text-center'>
                             {post.postedBy}
                         </div>
-                        <div className='text-xl'>
+                        <div className='text-center py-2'>
                             <div>{post.haiku_line_1},</div>
                             <div>{post.haiku_line_2},</div>
                             <div>{post.haiku_line_3}</div>
                         </div>
-                        <div className='text-slate-400 text-sm' >{post.createdAt}</div>
+                        <div className='text-slate-400 py-2 text-sm text-center' >{post.createdAt}</div>
                     </div>
                 </div>
             )
@@ -37,30 +37,39 @@ const Home = () => {
 
     return (
         <div>
-            <div className='flex justify-center font-cormorantMedium text-slate-900 bg-bgImage bg-contain'>
+            <div className='flex justify-center bg-color-fit color-fit'>
                 <div className='p-16'>
-                    <div className='text-4xl tracking-widest'>Nature's calling</div>
-                    <div className='py-4 text-xl flex justify-center'>Compose some Haiku today and show it off.</div>
-                    <div className='text-xl flex justify-center'>Haiku - An unrhymed Japanese poem</div>
-                    <div className='text-xl flex justify-center'>consisting of 17 syllables in three lines</div>
-                    <div className='text-xl flex justify-center'>containing five, seven and five syllables</div>
+                    <div className='text-5xl font-biorhyme text-center py-4'>Haicore</div>
+                    <div className='text-xl text-center'>The Official Haiku</div>
+                    <div className='text-xl text-center'>Website</div>
+                    <div className='mt-3 text-center'>Haiku - An unrhymed Japanese poem,</div>
+                    <div className='text-center'>consisting of 17 syllables in three lines,</div>
+                    <div className='text-center'>containing five, seven and five syllables.</div>
                     {loggedIn===true&&(
                         <>
                             <Link to='/create'>
-                                <div className='flex my-8 justify-center border-sky-900 hover:bg-sky-900 hover:text-slate-200 border-2 text-sky-900 font-spectral active:bg-slate-700 font-bold text-sm cursor-pointer text-center py-2 px-4 rounded-full uppercase'>Start writing</div>
+                                <div className='flex my-8 justify-center text-white bg-color-fit-2 hover:bg-violet-800 
+                                                font-spectral font-light text-sm cursor-pointer py-2 px-4 
+                                                uppercase'>
+                                                    Start writing
+                                </div>
                             </Link>
                         </>
                     )} 
                     {loggedIn===false&&(
                         <>
                             <Link to='/login'>
-                                <div className='flex my-8 justify-center border-sky-900 hover:bg-sky-900 hover:text-slate-200 border-2 text-sky-900 font-spectral active:bg-slate-700 font-bold text-sm cursor-pointer text-center py-2 px-4 rounded-full uppercase'>Start writing</div>
+                                <div className='flex my-8 justify-center text-white bg-color-fit-2 hover:bg-violet-800
+                                                font-spectral font-light text-sm cursor-pointer text-center py-2 px-4 
+                                                uppercase'>
+                                                    Start writing
+                                </div>
                             </Link>
                         </>
                     )}    
                 </div>
             </div>
-            <div className='flex flex-col-reverse'>
+            <div className='flex flex-col-reverse bg-slate-100'>
                 {showPosts()}
             </div>
         </div>

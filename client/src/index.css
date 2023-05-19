@@ -3,31 +3,31 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Cormorant_Medium";
-  src: url("../public/fonts/Cormorant/Cormorant-MediumItalic.ttf");
-}
-
-@font-face {
-  font-family: "Cormorant";
-  src: url("../public/fonts/Cormorant/Cormorant-LightItalic.ttf");
-}
-
-@font-face {
-  font-family: "Nunito";
-  src: url("../public/fonts/Nunito/static/Nunito-Medium.ttf");
-}
-
-@font-face {
   font-family: "BioRhyme";
-  src: url("../public/fonts/BioRhyme/BioRhyme-ExtraBold.ttf");
-}
-
-@font-face {
-  font-family: "Hahmlet";
-  src: url("../public/fonts/Hahmlet/static/Hahmlet-Thin.ttf");
+  src: url("../public/fonts/BioRhyme-ExtraBold.ttf");
 }
 
 @font-face {
   font-family: "Spectral";
-  src: url("../public/fonts/Spectral/Spectral-Light.ttf");
+  src: url("../public/fonts/Spectral-Regular.ttf");
+}
+
+.color-fit {
+  color: darkslateblue;
+}
+
+.bg-color-fit {
+  background-color: #cce8ff;
+}
+
+.bg-color-fit-2 {
+  background-color: darkslateblue;
+}
+
+.bg-color-fit-3 {
+  background-color: darkblue;
+}
+
+.border-color-fit {
+  border-color: darkslateblue;
 }

@@ -64,8 +64,8 @@ const Create = ({currentId, setCurrentId}) => {
     return (
         <form autoComplete='off' onSubmit={handleSubmit(onSubmit)} className="flex justify-center">
             <div className='mt-4'>
-                <div className='flex justify-center'>
-                    <label className='inline-block mb-2 font-extrabold text-2xl'>
+                <div className='flex justify-center py-4 color-fit'>
+                    <label className='inline-block mt-2 text-3xl uppercase'>
                         {currentId ? 'Redeem yourself' : 'Whip up a Haiku'}
                     </label>
                 </div>
@@ -79,7 +79,7 @@ const Create = ({currentId, setCurrentId}) => {
                             value={postData.haiku_line_1} 
                             onChange={e=>{setPostData({...postData,haiku_line_1:e.target.value});syllableCount({...syllables,syllables_line_1:syllable(postData.haiku_line_1)})}}
                             placeholder='An old silent pond' 
-                            className='block w-80 focus:border-sky-900 font-spectral placeholder-slate-100 flex-1 border-b-2 border-gray-400 outline-none'
+                            className='block w-80 focus:border-violet-900 placeholder-slate-100 flex-1 border-b-2 border-gray-400 outline-none'
                         />
                         <label className='pl-2 font-biorhyme text-2xl font-extrabold'>
                             ,
@@ -98,7 +98,7 @@ const Create = ({currentId, setCurrentId}) => {
                             defavalue={postData.haiku_line_2} 
                             placeholder='A frog jumps into the pond'
                             onChange={e=>{setPostData({...postData,haiku_line_2:e.target.value});syllableCount({...syllables,syllables_line_2:syllable(postData.haiku_line_2)})}}
-                            className='block w-80 focus:border-sky-900 font-spectral placeholder-slate-100 flex-1 border-b-2 border-gray-400 outline-none'
+                            className='block w-80 focus:border-violet-900 placeholder-slate-100 flex-1 border-b-2 border-gray-400 outline-none'
                         />
                         <label className='block pl-2 font-biorhyme text-2xl font-extrabold'>
                             ,
@@ -117,7 +117,7 @@ const Create = ({currentId, setCurrentId}) => {
                             value={postData.haiku_line_3} 
                             placeholder='"splash!" Silence again'
                             onChange={e=>{setPostData({...postData,haiku_line_3:e.target.value});syllableCount({...syllables,syllables_line_3:syllable(postData.haiku_line_3)})}}
-                            className='block w-80 focus:border-sky-900 font-spectral placeholder-slate-100 flex-1 border-b-2 border-gray-400 outline-none'
+                            className='block w-80 focus:border-violet-900 placeholder-slate-100 flex-1 border-b-2 border-gray-400 outline-none'
                         />
                     </div>
                     <div className='text-red-700'>
@@ -125,14 +125,15 @@ const Create = ({currentId, setCurrentId}) => {
                         {errors.haiku_line_3?.type==='validate' && 'This line should have 5 syllables'}    
                     </div>
                 </div>
-                <div className='flex justify-center font-nunito my-2 tracking-widest'>
+                <div className='flex justify-center font-nunito my-8 tracking-widest'>
                     <div>{syllable(postData.haiku_line_1)}-{syllable(postData.haiku_line_2)}-{syllable(postData.haiku_line_3)}</div>
                 </div>
                 <div className='flex justify-center'>
                     <button type="submit"
-                        className='border-sky-900 hover:bg-sky-900 hover:text-slate-200 border-2 text-sky-900 font-spectral active:bg-slate-700 font-bold text-sm cursor-pointer text-center py-2 px-4 rounded-full'
+                        className='border-color-fit hover:bg-violet-900 hover:border-0 hover:text-white border color-fit 
+                        font-bold text-sm cursor-pointer text-center py-2 px-6 rounded'
                     >
-                        SWISH
+                        POST
                     </button>
                 </div>
             </div>

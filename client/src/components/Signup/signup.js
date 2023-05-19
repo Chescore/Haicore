@@ -30,19 +30,19 @@ const Signup = () => {
     }
 
     return (
-        <div className='p-8 rounded-lg shadow-xl m-4 bg-zinc-200 max-w-md'>
-            <div className='font-extrabold text-2xl'>
+        <div className='p-8 m-4 border shadow max-w-md'>
+            <div className='color-fit text-3xl'>
                 Create a new Account
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='mb-6'>
-                    <div className='py-2'>
-                        <label className='font-extrabold inline-block mb-2'>Username</label>
+                    <div className='py-4'>
+                        <label className='inline-block color-fit mb-2'>Username</label>
                         <input type='text'
                             {...register("username",{required:{
                                 value:true,message:"Your username is required"
                             }})}
-                            className='block w-full px-4 py-3 text-sm font-spectral 
+                            className='block w-full px-4 py-3  
                             bg-clip-padding border border-solid border-slate-400 rounded transition 
                             ease-in-out m-0 focus:border-sky-400 focus:outline-none placeholder:text-slate-200'
                             placeholder='Username'
@@ -54,14 +54,14 @@ const Signup = () => {
                         </div>
                     </div>
                     <div className='py-2'>
-                        <label className='font-extrabold inline-block mb-2'>Email</label>
+                        <label className='inline-block color-fit mb-2'>Email</label>
                         <input type='text' 
                             {...register("email",{required:{
                                 value:true,message:"Your email address is required"
                             },pattern:{
                                 value:/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,message:"Invalid email address"
                             }})}
-                            className='block w-full px-4 py-3 text-sm font-spectral 
+                            className='block w-full px-4 py-3  
                             bg-clip-padding border border-solid border-slate-400 rounded transition 
                             ease-in-out m-0 focus:border-sky-400 focus:outline-none placeholder:text-slate-200'
                             placeholder='Email address'
@@ -73,12 +73,12 @@ const Signup = () => {
                             </div>
                     </div>
                     <div className='py-2'>
-                        <label className='font-extrabold inline-block mb-2'>Password</label>
+                        <label className='inline-block color-fit mb-2'>Password</label>
                         <input type='password' 
                             {...register("password",{
                                 required:{value:true,message:'Create a new password'}
                             })}
-                            className='block w-full px-4 py-3 text-sm font-spectral 
+                            className='block w-full px-4 py-3  
                             bg-clip-padding border border-solid border-slate-400 rounded transition 
                             ease-in-out m-0 focus:border-sky-400 focus:outline-none placeholder:text-slate-200'
                             placeholder='Create new password'
@@ -89,12 +89,12 @@ const Signup = () => {
                             </div>
                     </div>
                     <div className='py-2'>
-                        <label className='font-extrabold inline-block mb-2'>Confirm password</label>
+                        <label className='inline-block color-fit mb-2'>Confirm password</label>
                         <input type='password' 
                             {...register("passwordVerification",{
                                     required:{value:true,message:'Verify the password entered'}
                             })}
-                            className='block w-full px-4 py-3 text-sm font-spectral 
+                            className='block w-full px-4 py-3  
                             bg-clip-padding border border-solid border-slate-400 rounded transition 
                             ease-in-out m-0 focus:border-sky-400 focus:outline-none placeholder:text-slate-200'
                             placeholder='Verify your password'
@@ -106,9 +106,9 @@ const Signup = () => {
 
                             </div>
                     </div>
-                    <div className='py-4'>
-                        <Link to='/login'><label className='text-sm text-slate-400 tracking-wider cursor-pointer hover:text-slate-600 active:text-slate-800'>Existing account? Log in</label></Link>
-                        <button type='submit' className='mx-8 border-zinc-500 hover:bg-zinc-500 hover:text-slate-200 border-2 text-zinc-500 font-spectral active:bg-zinc-700 font-bold text-sm cursor-pointer text-center py-2 px-4 rounded-full'>Register</button>
+                    <div className='pt-6'>
+                        <Link to='/login'><label className='text-sm text-slate-600 hover:text-slate-400 tracking-wider cursor-pointer active:text-slate-800'>Existing account? Log in</label></Link>
+                        <button type='submit' className='mx-8 border-violet-900 hover:bg-violet-900 hover:text-white border color-fit font-bold text-sm cursor-pointer text-center py-2 px-4 rounded'>Sign up</button>
                     </div>
 
                 </div>

@@ -1,6 +1,4 @@
 import React, { useContext } from 'react';
-import {faSignOut} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import axios from 'axios';
 import AuthContext from '../../hoc/AuthContext/auth';
 import { useNavigate } from 'react-router-dom';
@@ -17,7 +15,7 @@ const Logout = () => {
 
     return (
         <button onClick={logOut}>
-            <FontAwesomeIcon icon={faSignOut}></FontAwesomeIcon>
+            Log out
         </button>
     );
 };
